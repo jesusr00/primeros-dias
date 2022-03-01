@@ -12,14 +12,57 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.jesusr00.primarosdas.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_direction_council"
+        android:name="com.jesusr00.primarosdas.ui.direction_council.DirectionCouncilFragment"
+        android:label="@string/direction_council"
+        tools:layout="@layout/fragment_direction_conuncil" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.jesusr00.primarosdas.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_uci_info"
+        android:name="com.jesusr00.primarosdas.ui.uci_info.UciInfoFragment"
+        android:label="@string/uci_info"
+        tools:layout="@layout/fragment_uci_info" />
+
+    <fragment
+        android:id="@+id/nav_faculty_info"
+        android:name="com.jesusr00.primarosdas.ui.faculty_info.FacultyInfoFragment"
+        android:label="@string/faculty_info"
+        tools:layout="@layout/fragment_faculty_info" />
+
+    <fragment
+        android:id="@+id/nav_guide_teachers"
+        android:name="com.jesusr00.primarosdas.ui.guide_teachers.GuideTeachersFragment"
+        android:label="@string/guide_teachers"
+        tools:layout="@layout/fragment_guide_teachers" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.jesusr00.primarosdas.ui.events.EventsFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_feu_movements"
+        android:name="com.jesusr00.primarosdas.ui.feu_movements.FeuMovements"
+        android:label="@string/feu_movements"
+        tools:layout="@layout/fragment_feu_movements" />
+
+    <fragment
+        android:id="@+id/nav_scientific_groups"
+        android:name="com.jesusr00.primarosdas.ui.scientific_groups.ScientificGroupsFragment"
+        android:label="@string/scientific_groups"
+        tools:layout="@layout/fragment_scientific_groups" />
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.jesusr00.primarosdas.ui.map.MapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/nav_useful_data"
+        android:name="com.jesusr00.primarosdas.ui.useful_data.UsefulDataFragment"
+        android:label="@string/useful_data"
+        tools:layout="@layout/fragment_useful_datafragment_map" />
+
 </navigation>

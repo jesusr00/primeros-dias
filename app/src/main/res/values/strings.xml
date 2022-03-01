@@ -8,6 +8,18 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="direction_council">Consejo de Dirección</string>
+    <string name="uci_info">Información de la UCI</string>
+    <string name="faculty_info">Información de la Facultad</string>
+    <string name="guide_teachers">Profesores guías</string>
+    <string name="events">Principales eventos</string>
+    <string name="feu_movements">Movimientos FEU</string>
+    <string name="scientific_groups">Grupos de Trabajo Cientifico Estudicntil</string>
+    <string name="map">Mapa de la UCI</string>
+    <string name="useful_data">Datos Utiles</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

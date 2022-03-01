@@ -9,12 +9,49 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_direction_council"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/direction_council" />
+
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_uci_info"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/uci_info" />
+
+        <item
+            android:id="@+id/nav_faculty_info"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/faculty_info" />
+
+        <item
+            android:id="@+id/nav_guide_teachers"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/guide_teachers" />
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/events" />
+
+        <item
+            android:id="@+id/nav_feu_movements"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/feu_movements" />
+
+        <item
+            android:id="@+id/nav_scientific_groups"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/scientific_groups" />
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/map" />
+
+        <item
+            android:id="@+id/nav_useful_data"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/useful_data" />
+
     </group>
 </menu>
