@@ -4,11 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.PersistableBundle
 import android.view.WindowManager
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class SplashActivity : AppCompatActivity() {
     @OptIn(DelicateCoroutinesApi::class)
@@ -21,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        GlobalScope.launch {
+        GlobalScope.launch(Dispatchers.Main) {
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             delay(3000)
             startActivity(intent)

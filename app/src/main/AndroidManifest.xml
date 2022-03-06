@@ -10,16 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimarosDías">
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.PrimarosDías.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:noHistory="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PrimarosDías.NoActionBar"/>
     </application>
 
 </manifest>

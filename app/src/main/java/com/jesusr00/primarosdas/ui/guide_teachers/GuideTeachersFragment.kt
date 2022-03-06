@@ -7,11 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.jesusr00.primarosdas.R
 import com.jesusr00.primarosdas.adapters.GuideTeachersAdapter
 import com.jesusr00.primarosdas.database.DatabaseHelper
 import com.jesusr00.primarosdas.databinding.FragmentGuideTeachersBinding
-import com.jesusr00.primarosdas.databinding.FragmentHomeBinding
 import com.jesusr00.primarosdas.models.GuideTeachers
 import kotlinx.coroutines.*
 

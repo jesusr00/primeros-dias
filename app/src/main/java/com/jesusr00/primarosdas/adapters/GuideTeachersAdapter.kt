@@ -17,7 +17,7 @@ class GuideTeachersAdapter(private val guideTeachers: ArrayList<GuideTeachers>):
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text = "${guideTeachers[position].name} ${guideTeachers[position].name}"
+        holder.name.text = "${guideTeachers[position].name} ${guideTeachers[position].lastName}"
         holder.group.text = guideTeachers[position].group.toString()
     }
 
