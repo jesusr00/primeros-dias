@@ -4,7 +4,7 @@ import android.content.Context
 import com.jesusr00.primarosdas.models.GuideTeachers
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper
 
-class DatabaseHelper(context: Context?): SQLiteAssetHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     fun getAllGuideTeachers(): ArrayList<GuideTeachers>{
         val result = ArrayList<GuideTeachers>()

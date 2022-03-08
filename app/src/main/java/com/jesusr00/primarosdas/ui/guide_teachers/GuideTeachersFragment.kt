@@ -21,7 +21,7 @@ class GuideTeachersFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        db = DatabaseHelper(activity)
+        db = DatabaseHelper(requireContext())
     }
 
     override fun onCreateView(
