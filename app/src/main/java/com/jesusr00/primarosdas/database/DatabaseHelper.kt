@@ -8,9 +8,9 @@ class DatabaseHelper(context: Context?): SQLiteAssetHelper(context, DATABASE_NAM
 
     fun getAllGuideTeachers(): ArrayList<GuideTeachers>{
         val result = ArrayList<GuideTeachers>()
-        val queryCursor = this.readableDatabase.query("guide_teachers", null, null, null, null, null, null)
+        val queryCursor = readableDatabase.rawQuery(GUIDE_TEACHERS, null);
         while (queryCursor.moveToNext()){
-            result.add(GuideTeachers(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getBlob(4),  queryCursor.getInt(3)))
+            result.add(GuideTeachers(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getInt(3), null))
         }
         queryCursor.close()
         close()
@@ -20,5 +20,6 @@ class DatabaseHelper(context: Context?): SQLiteAssetHelper(context, DATABASE_NAM
     companion object {
         private const val DATABASE_NAME = "info.db"
         private const val DATABASE_VERSION = 1
+        private const val GUIDE_TEACHERS = "SELECT name, last_name, username, brigade FROM main.r_guide_teachers INNER JOIN t_people ON r_guide_teachers.peopleId = t_people.id INNER JOIN main.t_brigade ON r_guide_teachers.groupId = t_brigade.id"
     }
 }
