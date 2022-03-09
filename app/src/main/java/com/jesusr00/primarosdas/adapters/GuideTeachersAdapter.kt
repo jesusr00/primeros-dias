@@ -12,7 +12,7 @@ import com.jesusr00.primarosdas.models.GuideTeachers
 class GuideTeachersAdapter(private val guideTeachers: ArrayList<GuideTeachers>): RecyclerView.Adapter<GuideTeachersAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.guide_teacher_card, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_person, parent, false))
     }
 
     @SuppressLint("SetTextI18n")
@@ -24,7 +24,7 @@ class GuideTeachersAdapter(private val guideTeachers: ArrayList<GuideTeachers>):
     override fun getItemCount(): Int = guideTeachers.size
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var name: TextView = itemView.findViewById(R.id.guide_teachers_card_name)
-        var group: TextView = itemView.findViewById(R.id.guide_teachers_card_group)
+        val name: TextView = itemView.findViewById(R.id.cardPersonName)
+        val group: TextView = itemView.findViewById(R.id.cardPersonPosition)
     }
 }

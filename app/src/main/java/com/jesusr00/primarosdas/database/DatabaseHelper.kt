@@ -10,7 +10,7 @@ class DatabaseHelper(context: Context?): SQLiteAssetHelper(context, DATABASE_NAM
         val result = ArrayList<GuideTeachers>()
         val queryCursor = this.readableDatabase.query("guide_teachers", null, null, null, null, null, null)
         while (queryCursor.moveToNext()){
-            result.add(GuideTeachers(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getInt(3), queryCursor.getBlob(4)))
+            result.add(GuideTeachers(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getBlob(4),  queryCursor.getInt(3)))
         }
         queryCursor.close()
         close()

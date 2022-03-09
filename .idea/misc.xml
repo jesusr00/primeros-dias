@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/card_feu.xml" value="0.15" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/fragment_direction_conuncil.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_feu_muvements.xml" value="0.18854166666666666" />
