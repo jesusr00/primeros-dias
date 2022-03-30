@@ -35,8 +35,7 @@ class GuideTeachersFragment : Fragment() {
     @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var guideTeachers: ArrayList<GuideTeachers>? = null
-        binding.guideTeachersRecyclerview.layoutManager = LinearLayoutManager(this@GuideTeachersFragment.context)
+        var guideTeachers: ArrayList<GuideTeachers>?
         GlobalScope.launch(Dispatchers.Main) {
             guideTeachers = (async { db.getAllGuideTeachers() }).await()
             binding.guideTeachersRecyclerview.adapter = GuideTeachersAdapter(guideTeachers!!)
