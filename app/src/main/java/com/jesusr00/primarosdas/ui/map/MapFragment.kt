@@ -34,21 +34,18 @@ import org.mapsforge.map.rendertheme.InternalRenderTheme
 import java.io.File
 
 
-class MapFragment : Fragment(), LocationListener{
+class MapFragment : Fragment(){
 
     private lateinit var binding: FragmentMapBinding
     private lateinit var tileRendererLayer: TileRendererLayer
     private lateinit var mapView: MapView
     private lateinit var tileCache: TileCache
     private lateinit var fileMap: File
-    private lateinit var myLocationOverlay: MyLocationOverlay
-    private var locationManager: LocationManager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidGraphicFactory.createInstance(requireActivity().application)
         fileMap = File(requireContext().getExternalFilesDir("maps"), "uci.map")
-        locationManager =  getSystemService(requireContext(), LocationManager::class.java)
     }
 
 
@@ -74,18 +71,6 @@ class MapFragment : Fragment(), LocationListener{
             CopyAssets(requireContext()).copyAssetsMap()
             fileMap = File(requireContext().getExternalFilesDir("maps"), "uci.map")
         }
-
-        val bitmap: Bitmap = AndroidGraphicFactory.convertToBitmap(ContextCompat.getDrawable(requireContext(), R.drawable.ic_maps_indicator_current_position))
-//        AndroidBitmap(
-//            BitmapFactory.decodeResource(
-//                requireContext().resources,
-//                R.drawable.ic_maps_indicator_current_position
-//            )
-//        )
-        val marker = Marker(null, bitmap, 0, 0)
-        val circle = Circle(null, 0f, null, null)
-        myLocationOverlay = MyLocationOverlay(marker, circle)
-
         binding = FragmentMapBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -95,7 +80,6 @@ class MapFragment : Fragment(), LocationListener{
         val mapDataStore: MapDataStore = MapFile(fileMap)
 
         mapView = binding.mapView
-        mapView.layerManager.layers.add(myLocationOverlay)
         mapView.isClickable = true
         mapView.mapScaleBar.isVisible = false
         mapView.setBuiltInZoomControls(true)
@@ -127,23 +111,9 @@ class MapFragment : Fragment(), LocationListener{
         mapView.layerManager.layers.add(tileRendererLayer)
     }
 
-    override fun onStop() {
-        locationManager!!.removeUpdates(this)
-        super.onStop()
-    }
-
     override fun onStart() {
         super.onStart()
         enableAvailableProviders()
-    }
-
-    override fun onLocationChanged(location: Location) {
-        myLocationOverlay.setPosition(
-            location.latitude,
-            location.longitude,
-            location.accuracy
-        )
-        mapView.setCenter(LatLong(location.latitude, location.longitude))
     }
 
     private fun enableAvailableProviders() {
@@ -156,12 +126,6 @@ class MapFragment : Fragment(), LocationListener{
                     ), 0
                 )
                 return
-            }
-        }
-        locationManager!!.removeUpdates(this)
-        for (provider in locationManager!!.getProviders(true)) {
-            if (LocationManager.GPS_PROVIDER == provider || LocationManager.NETWORK_PROVIDER == provider) {
-                locationManager!!.requestLocationUpdates(provider, 0, 0f, this)
             }
         }
     }

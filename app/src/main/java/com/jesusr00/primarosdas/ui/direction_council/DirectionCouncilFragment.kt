@@ -6,13 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jesusr00.primarosdas.adapters.DirectionCouncilAdapter
+import com.jesusr00.primarosdas.adapters.GuideTeachersAdapter
+import com.jesusr00.primarosdas.database.DatabaseHelper
 import com.jesusr00.primarosdas.databinding.FragmentDirectionConuncilBinding
 import com.jesusr00.primarosdas.models.DirectionCouncilMember
+import com.jesusr00.primarosdas.models.GuideTeachers
+import kotlinx.coroutines.*
 
 class DirectionCouncilFragment : Fragment() {
 
     private var _binding: FragmentDirectionConuncilBinding? = null
     private val binding get() = _binding!!
+    private lateinit var db: DatabaseHelper
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        db = DatabaseHelper(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,13 +32,15 @@ class DirectionCouncilFragment : Fragment() {
         return binding.root
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val dcm = ArrayList<DirectionCouncilMember>()
-        dcm.add(DirectionCouncilMember("Reina Victoria", "Estrada Nelson", "restrada", null, "Decana"))
-
-        binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(dcm)
+        var directionCouncilMembers: ArrayList<DirectionCouncilMember>? = null
+        GlobalScope.launch(Dispatchers.Main) {
+            directionCouncilMembers = (async { db.getAllDirectionCouncilMembers() }).await()
+            binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(directionCouncilMembers!!)
+        }
     }
 
 }

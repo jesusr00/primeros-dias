@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/card_feu.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/ic_maps_indicator_current_position.xml" value="0.168" />
+        <entry key="app/src/main/res/layout/card_feu.xml" value="0.15" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_day_details.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/layout/fragment_direction_conuncil.xml" value="0.18854166666666666" />
-        <entry key="app/src/main/res/layout/fragment_events.xml" value="0.13043478260869565" />
+        <entry key="app/src/main/res/layout/fragment_events.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_feu_muvements.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_guide_teachers.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.18854166666666666" />
@@ -15,6 +16,8 @@
         <entry key="app/src/main/res/layout/fragment_uci_info.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/fragment_useful_data.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/guide_teacher_card.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_day_event.xml" value="0.11503623188405797" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.18854166666666666" />
       </map>
     </option>
   </component>
