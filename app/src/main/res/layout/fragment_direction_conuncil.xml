@@ -6,7 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.direction_council.DirectionCouncilFragment">
 
+    <ProgressBar
+        android:id="@+id/directionCouncilProgress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"/>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/directionCouncilRecyclerView"

@@ -48,20 +48,6 @@ class MapFragment : Fragment(){
         fileMap = File(requireContext().getExternalFilesDir("maps"), "uci.map")
     }
 
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == 0) {
-            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                enableAvailableProviders();
-            }
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -111,22 +97,4 @@ class MapFragment : Fragment(){
         mapView.layerManager.layers.add(tileRendererLayer)
     }
 
-    override fun onStart() {
-        super.onStart()
-        enableAvailableProviders()
-    }
-
-    private fun enableAvailableProviders() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(
-                    arrayOf(
-                        Manifest.permission.ACCESS_COARSE_LOCATION,
-                        Manifest.permission.ACCESS_FINE_LOCATION
-                    ), 0
-                )
-                return
-            }
-        }
-    }
 }

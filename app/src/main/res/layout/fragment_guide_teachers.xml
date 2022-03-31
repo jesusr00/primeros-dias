@@ -6,10 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.guide_teachers.GuideTeachersFragment">
 
+    <ProgressBar
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:id="@+id/guideTeachersProgress" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:id="@+id/guide_teachers_recyclerview" />
+        android:id="@+id/guideTeachersRecyclerview"
+        android:visibility="gone"/>
 
 </FrameLayout>

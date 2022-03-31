@@ -36,10 +36,12 @@ class DirectionCouncilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var directionCouncilMembers: ArrayList<DirectionCouncilMember>? = null
+        var directionCouncilMembers: ArrayList<DirectionCouncilMember>?
         GlobalScope.launch(Dispatchers.Main) {
             directionCouncilMembers = (async { db.getAllDirectionCouncilMembers() }).await()
             binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(directionCouncilMembers!!)
+            binding.directionCouncilProgress.visibility = View.GONE
+            binding.directionCouncilRecyclerView.visibility = View.VISIBLE
         }
     }
 
