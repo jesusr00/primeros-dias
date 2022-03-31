@@ -39,6 +39,8 @@ class GuideTeachersFragment : Fragment() {
         GlobalScope.launch(Dispatchers.Main) {
             guideTeachers = (async { db.getAllGuideTeachers() }).await()
             binding.guideTeachersRecyclerview.adapter = GuideTeachersAdapter(guideTeachers!!)
+            binding.guideTeachersProgress.visibility = View.GONE
+            binding.guideTeachersRecyclerview.visibility = View.VISIBLE
         }
     }
 }

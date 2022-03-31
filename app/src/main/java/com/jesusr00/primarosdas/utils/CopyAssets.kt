@@ -34,7 +34,6 @@ class CopyAssets(val context: Context) {
                 if (`in` != null) {
                     try {
                         `in`.close()
-                        `in` = null
                     } catch (e: IOException) {
                     }
                 }
@@ -42,7 +41,6 @@ class CopyAssets(val context: Context) {
                     try {
                         out.flush()
                         out.close()
-                        out = null
                     } catch (e: IOException) {
                     }
                 }
