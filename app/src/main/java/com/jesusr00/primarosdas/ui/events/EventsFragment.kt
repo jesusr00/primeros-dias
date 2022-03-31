@@ -29,9 +29,4 @@ class EventsFragment : Fragment() {
         binding.eventsTabLayout.tabMode = TabLayout.MODE_SCROLLABLE;
         return binding.root
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

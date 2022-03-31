@@ -63,6 +63,6 @@
         android:id="@+id/nav_useful_data"
         android:name="com.jesusr00.primarosdas.ui.useful_data.UsefulDataFragment"
         android:label="@string/useful_data"
-        tools:layout="@layout/fragment_useful_datafragment_map" />
+        tools:layout="@layout/fragment_useful_data" />
 
 </navigation>
