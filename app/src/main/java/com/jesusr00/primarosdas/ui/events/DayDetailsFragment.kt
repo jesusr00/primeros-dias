@@ -49,6 +49,11 @@ class DayDetailsFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
     companion object {
         private const val DAY_EVENTS = "DAY_EVENTS"
 
