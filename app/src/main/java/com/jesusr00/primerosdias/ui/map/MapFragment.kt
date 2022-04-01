@@ -30,7 +30,7 @@ class MapFragment : Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidGraphicFactory.createInstance(requireActivity().application)
-        fileMap = File(requireContext().getExternalFilesDir("maps"), "uci.map")
+        fileMap = CustomAssetsManager(requireContext()).getMap()
     }
 
     override fun onCreateView(
@@ -38,10 +38,6 @@ class MapFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        if (!fileMap.exists()) {
-            CustomAssetsManager(requireContext()).copyAssetsMap()
-            fileMap = File(requireContext().getExternalFilesDir("maps"), "uci.map")
-        }
         binding = FragmentMapBinding.inflate(inflater, container, false)
         return binding.root
     }

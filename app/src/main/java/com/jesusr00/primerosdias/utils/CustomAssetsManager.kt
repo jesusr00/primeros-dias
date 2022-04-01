@@ -13,12 +13,16 @@ class CustomAssetsManager(val context: Context) {
 
     fun getImages(): ArrayList<File> {
         val images = ArrayList<File>()
-        val assetManager = context.assets
-        val files = assetManager.list("images")
+        val assets = context.getExternalFilesDir("images")
+        val files = assets?.list()
         for (file in files!!) {
             images.add(File(context.getExternalFilesDir("images"), file))
         }
         return images
+    }
+
+    fun getMap(): File {
+        return File(context.getExternalFilesDir("maps"), "uci.map")
     }
 
     private fun copyAssets(path: String = "") {
