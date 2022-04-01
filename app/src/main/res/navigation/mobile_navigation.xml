@@ -7,78 +7,71 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.jesusr00.primarosdas.ui.home.HomeFragment"
+        android:name="com.jesusr00.primerosdias.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_nav_uci_info"
-            app:destination="@id/nav_uci_info"
-            app:enterAnim="@anim/fade_in"
-            app:exitAnim="@anim/fade_out"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_direction_council"
-        android:name="com.jesusr00.primarosdas.ui.direction_council.DirectionCouncilFragment"
+        android:name="com.jesusr00.primerosdias.ui.direction_council.DirectionCouncilFragment"
         android:label="@string/direction_council"
         tools:layout="@layout/fragment_direction_conuncil" />
 
     <fragment
         android:id="@+id/nav_uci_info"
-        android:name="com.jesusr00.primarosdas.ui.uci_info.UciInfoFragment"
+        android:name="com.jesusr00.primerosdias.ui.uci_info.UciInfoFragment"
         android:label="@string/uci_info"
-        tools:layout="@layout/fragment_uci_info" >
-        <action
-            android:id="@+id/action_nav_uci_info_to_nav_home"
-            app:destination="@id/nav_home"
-            app:enterAnim="@anim/fade_in"
-            app:exitAnim="@anim/fade_in"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/fade_out" />
-    </fragment>
+        tools:layout="@layout/fragment_uci_info" />
 
     <fragment
         android:id="@+id/nav_faculty_info"
-        android:name="com.jesusr00.primarosdas.ui.faculty_info.FacultyInfoFragment"
+        android:name="com.jesusr00.primerosdias.ui.faculty_info.FacultyInfoFragment"
         android:label="@string/faculty_info"
         tools:layout="@layout/fragment_faculty_info" />
 
     <fragment
         android:id="@+id/nav_guide_teachers"
-        android:name="com.jesusr00.primarosdas.ui.guide_teachers.GuideTeachersFragment"
+        android:name="com.jesusr00.primerosdias.ui.guide_teachers.GuideTeachersFragment"
         android:label="@string/guide_teachers"
         tools:layout="@layout/fragment_guide_teachers" />
 
     <fragment
         android:id="@+id/nav_events"
-        android:name="com.jesusr00.primarosdas.ui.events.EventsFragment"
+        android:name="com.jesusr00.primerosdias.ui.events.EventsFragment"
         android:label="@string/events"
         tools:layout="@layout/fragment_events" />
 
     <fragment
         android:id="@+id/nav_feu_movements"
-        android:name="com.jesusr00.primarosdas.ui.feu_movements.FeuMovements"
+        android:name="com.jesusr00.primerosdias.ui.feu_movements.FeuMovements"
         android:label="@string/feu_movements"
         tools:layout="@layout/fragment_feu_movements" />
 
     <fragment
         android:id="@+id/nav_scientific_groups"
-        android:name="com.jesusr00.primarosdas.ui.scientific_groups.ScientificGroupsFragment"
+        android:name="com.jesusr00.primerosdias.ui.scientific_groups.ScientificGroupsFragment"
         android:label="@string/scientific_groups"
         tools:layout="@layout/fragment_scientific_groups" />
 
     <fragment
         android:id="@+id/nav_map"
-        android:name="com.jesusr00.primarosdas.ui.map.MapFragment"
+        android:name="com.jesusr00.primerosdias.ui.map.MapFragment"
         android:label="@string/map"
         tools:layout="@layout/fragment_map" />
 
     <fragment
         android:id="@+id/nav_useful_data"
-        android:name="com.jesusr00.primarosdas.ui.useful_data.UsefulDataFragment"
+        android:name="com.jesusr00.primerosdias.ui.useful_data.UsefulDataFragment"
         android:label="@string/useful_data"
         tools:layout="@layout/fragment_useful_data" />
+
+    <action
+        android:id="@+id/action_mobile_navigation_pop"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popUpTo="@id/mobile_navigation"
+        app:popUpToInclusive="true"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out" />
 
 </navigation>
