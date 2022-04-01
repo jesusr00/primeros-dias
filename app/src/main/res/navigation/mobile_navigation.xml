@@ -9,7 +9,15 @@
         android:id="@+id/nav_home"
         android:name="com.jesusr00.primarosdas.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_uci_info"
+            app:destination="@id/nav_uci_info"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_direction_council"
@@ -21,7 +29,15 @@
         android:id="@+id/nav_uci_info"
         android:name="com.jesusr00.primarosdas.ui.uci_info.UciInfoFragment"
         android:label="@string/uci_info"
-        tools:layout="@layout/fragment_uci_info" />
+        tools:layout="@layout/fragment_uci_info" >
+        <action
+            android:id="@+id/action_nav_uci_info_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_faculty_info"

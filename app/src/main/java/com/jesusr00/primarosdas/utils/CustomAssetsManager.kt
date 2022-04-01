@@ -6,10 +6,20 @@ import android.util.Log
 import java.io.*
 
 
-class CopyAssets(val context: Context) {
+class CustomAssetsManager(val context: Context) {
 
     fun copyAssetsMap() = copyAssets("maps")
     fun copyAssetsImages() = copyAssets("images")
+
+    fun getImages(): ArrayList<File> {
+        val images = ArrayList<File>()
+        val assetManager = context.assets
+        val files = assetManager.list("images")
+        for (file in files!!) {
+            images.add(File(context.getExternalFilesDir("images"), file))
+        }
+        return images
+    }
 
     private fun copyAssets(path: String = "") {
         val assetManager: AssetManager = context.assets
