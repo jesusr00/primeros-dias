@@ -22,4 +22,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- UCI Information -->
+    <string name="campus_title">Campus</string>
+    <string name="campus_description">Ciudad tecnológica de avanzada, con una infraestructura de más de 150 edificaciones distribuidas en 268 hectáreas, dotada de amplias y modernas instalaciones al servicio a la comunidad universitaria.</string>
+    <string name="cultural_title">Patrimonio Cultural</string>
+    <string name="cultural_description">Atesoramos 33 obras originales donadas por destacadas figuras de las artes plásticas nacionales, en un entorno concebido como una gran galería de arte al aire libre de elevado valor patrimonial.</string>
+    <string name="sport_title">Deporte</string>
+    <string name="sport_description">Instalaciones para diversas disciplinas nos permiten asumir la realización de eventos deportivos. El juego ciencia recibe una atención especial a través de la Cátedra Honorífica de Ajedrez “Remberto Fernández”.</string>
+    <string name="communication_title">Comunicación</string>
+    <string name="communication_description">Gestionamos los procesos de comunicación internos y externos para fortalecer nuestra identidad sobre la base de valores compartidos, y garantizar la construcción de una imagen institucional adecuada.</string>
+    <string name="events_title">Eventos</string>
+    <string name="events_description">Organizamos, participamos y promovemos importantes eventos científicos, académicos, sociales, políticos, culturales y deportivos, a nivel nacional e internacional.</string>
+    <string name="graduates_title">Egresados</string>
+    <string name="graduates_description">Durante 19 años hemos graduado 15 453 Ingenieros en Ciencias Informáticas con un alto nivel de especialización en el trabajo con las tecnologías de la información y las comunicaciones.</string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.jesusr00.primarosdas.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jesusr00.primarosdas.R
 import com.jesusr00.primarosdas.models.Event
+import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.util.*
 
 class DayEventsAdapter(private val events: List<Event>) : RecyclerView.Adapter<DayEventsAdapter.ViewHolder>() {
 
@@ -27,8 +31,19 @@ class DayEventsAdapter(private val events: List<Event>) : RecyclerView.Adapter<D
         private val title: TextView = itemView.findViewById(R.id.day_event_title)
         private val description: TextView = itemView.findViewById(R.id.day_event_description)
 
+        private fun getDateTime(s: Long): String? {
+            return try {
+                val sdf = SimpleDateFormat("hh:mm a")
+                val netDate = Date(s*1000)
+                sdf.format(netDate)
+            } catch (e: Exception) {
+                e.toString()
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
         fun bind(event: Event) {
-            title.text = event.title
+            title.text = "${event.title}\n${getDateTime(event.startTime)}"
             description.text = event.description
         }
     }

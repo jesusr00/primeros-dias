@@ -34,7 +34,7 @@ class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME
         val result = ArrayList<Event>()
         val queryCursor = readableDatabase.rawQuery("$EVENTS WHERE t_events.day_id = $dayId", null)
         while (queryCursor.moveToNext()) {
-            result.add(Event(queryCursor.getInt(0), queryCursor.getInt(1), queryCursor.getInt(2), queryCursor.getString(3), queryCursor.getString(4), queryCursor.getString(5), queryCursor.getString(6)))
+            result.add(Event(queryCursor.getInt(0), queryCursor.getLong(1), queryCursor.getLong(2), queryCursor.getString(3), queryCursor.getString(4), queryCursor.getString(5), queryCursor.getString(6)))
         }
         queryCursor.close()
         close()

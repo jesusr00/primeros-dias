@@ -1,33 +1,18 @@
 package com.jesusr00.primarosdas.ui.map
 
-import android.Manifest
-import android.content.pm.PackageManager
-import android.graphics.BitmapFactory
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.checkSelfPermission
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
-import com.jesusr00.primarosdas.R
 import com.jesusr00.primarosdas.databinding.FragmentMapBinding
-import com.jesusr00.primarosdas.utils.CopyAssets
-import org.mapsforge.core.graphics.Bitmap
+import com.jesusr00.primarosdas.utils.CustomAssetsManager
 import org.mapsforge.core.model.LatLong
-import org.mapsforge.map.android.graphics.AndroidBitmap
 import org.mapsforge.map.android.graphics.AndroidGraphicFactory
 import org.mapsforge.map.android.util.AndroidUtil
 import org.mapsforge.map.android.view.MapView
 import org.mapsforge.map.datastore.MapDataStore
 import org.mapsforge.map.layer.cache.TileCache
-import org.mapsforge.map.layer.overlay.Circle
-import org.mapsforge.map.layer.overlay.Marker
 import org.mapsforge.map.layer.renderer.TileRendererLayer
 import org.mapsforge.map.reader.MapFile
 import org.mapsforge.map.rendertheme.InternalRenderTheme
@@ -54,7 +39,7 @@ class MapFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View {
         if (!fileMap.exists()) {
-            CopyAssets(requireContext()).copyAssetsMap()
+            CustomAssetsManager(requireContext()).copyAssetsMap()
             fileMap = File(requireContext().getExternalFilesDir("maps"), "uci.map")
         }
         binding = FragmentMapBinding.inflate(inflater, container, false)

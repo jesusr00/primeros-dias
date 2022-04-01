@@ -23,7 +23,7 @@
         <entry key="app/src/main/res/layout/fragment_guide_teachers.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_scientific_groups.xml" value="0.18854166666666666" />
-        <entry key="app/src/main/res/layout/fragment_uci_info.xml" value="0.1734375" />
+        <entry key="app/src/main/res/layout/fragment_uci_info.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_useful_data.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/guide_teacher_card.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_day_event.xml" value="0.11503623188405797" />

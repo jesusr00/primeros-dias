@@ -1,12 +1,10 @@
 package com.jesusr00.primarosdas.ui.guide_teachers
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.jesusr00.primarosdas.adapters.GuideTeachersAdapter
 import com.jesusr00.primarosdas.database.DatabaseHelper
 import com.jesusr00.primarosdas.databinding.FragmentGuideTeachersBinding
