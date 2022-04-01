@@ -4,22 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.WindowManager
 import com.jesusr00.primerosdias.utils.CustomAssetsManager
 import kotlinx.coroutines.*
-import java.io.File
 
 class SplashActivity : AppCompatActivity() {
 
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
 
         GlobalScope.launch(Dispatchers.Main) {
             val customAssetsManager = CustomAssetsManager(this@SplashActivity)
@@ -37,8 +31,8 @@ class SplashActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
-            //delay(3000)
-            delay(30)
+            delay(3000)
+            //delay(30)
             startActivity(intent)
         }
     }

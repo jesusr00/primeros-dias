@@ -64,4 +64,9 @@
         <item name="colorPrimaryInverse">@color/md_theme_light_primaryInverse</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.PrimarosDías.NoActionBar">
+        <item name="android:windowBackground">@color/md_theme_light_primary</item>
+        <item name="colorPrimaryDark">@color/md_theme_light_primary</item>
+    </style>
+
 </resources>

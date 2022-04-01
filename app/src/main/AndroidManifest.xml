@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimarosDías">
         <activity
-            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name="com.jesusr00.primerosdias.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/SplashTheme"
             android:noHistory="true"
             android:exported="true">
             <intent-filter>
