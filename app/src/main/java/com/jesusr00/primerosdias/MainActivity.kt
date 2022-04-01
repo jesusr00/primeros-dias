@@ -45,8 +45,11 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         val navBuilder = NavOptions.Builder()
-        navBuilder.setEnterAnim(R.anim.fade_in).setExitAnim(R.anim.fade_out)
+            .setEnterAnim(R.anim.fade_in).setExitAnim(R.anim.fade_out)
             .setPopEnterAnim(R.anim.fade_in).setPopExitAnim(R.anim.fade_out)
+        val navOptions = navBuilder.setPopUpTo(R.id.nav_home, false).build()
+        val navHomeOptions = navBuilder.setLaunchSingleTop(true).build()
+
 
         navView.setNavigationItemSelectedListener { menuItem ->
 
@@ -61,34 +64,34 @@ class MainActivity : AppCompatActivity() {
 
                     when (menuItem.itemId) {
                         R.id.nav_home -> {
-                            navController.navigate(R.id.nav_home, null, navBuilder.build())
+                            navController.navigate(R.id.nav_home, null, navHomeOptions)
                         }
                         R.id.nav_direction_council -> {
-                            navController.navigate(R.id.nav_direction_council, null, navBuilder.build())
+                            navController.navigate(R.id.nav_direction_council, null, navOptions)
                         }
                         R.id.nav_events -> {
-                            navController.navigate(R.id.nav_events, null, navBuilder.build())
+                            navController.navigate(R.id.nav_events, null, navOptions)
                         }
                         R.id.nav_faculty_info -> {
-                            navController.navigate(R.id.nav_faculty_info, null, navBuilder.build())
+                            navController.navigate(R.id.nav_faculty_info, null, navOptions)
                         }
                         R.id.nav_feu_movements -> {
-                            navController.navigate(R.id.nav_feu_movements, null, navBuilder.build())
+                            navController.navigate(R.id.nav_feu_movements, null, navOptions)
                         }
                         R.id.nav_guide_teachers -> {
-                            navController.navigate(R.id.nav_guide_teachers, null, navBuilder.build())
+                            navController.navigate(R.id.nav_guide_teachers, null, navOptions)
                         }
                         R.id.nav_map -> {
-                            navController.navigate(R.id.nav_map, null, navBuilder.build())
+                            navController.navigate(R.id.nav_map, null, navOptions)
                         }
                         R.id.nav_scientific_groups -> {
-                            navController.navigate(R.id.nav_scientific_groups, null, navBuilder.build())
+                            navController.navigate(R.id.nav_scientific_groups, null, navOptions)
                         }
                         R.id.nav_uci_info -> {
-                            navController.navigate(R.id.nav_uci_info, null, navBuilder.build())
+                            navController.navigate(R.id.nav_uci_info, null, navOptions)
                         }
                         R.id.nav_useful_data -> {
-                            navController.navigate(R.id.nav_useful_data, null, navBuilder.build())
+                            navController.navigate(R.id.nav_useful_data, null, navOptions)
                         }
                     }
 

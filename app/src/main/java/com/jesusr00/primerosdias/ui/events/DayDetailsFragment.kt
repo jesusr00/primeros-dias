@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.navOptions
 import com.jesusr00.primerosdias.adapters.DayEventsAdapter
 import com.jesusr00.primerosdias.database.DatabaseHelper
 import com.jesusr00.primerosdias.databinding.FragmentDayDetailsBinding
@@ -64,6 +65,7 @@ class DayDetailsFragment : Fragment() {
                 arguments = Bundle().apply {
                     putInt(DAY_EVENTS, dayEvents)
                 }
+                navOptions { launchSingleTop = true }
             }
     }
 }

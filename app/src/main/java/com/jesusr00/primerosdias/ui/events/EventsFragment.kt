@@ -14,6 +14,8 @@ class EventsFragment : Fragment() {
 
     private var _binding: FragmentEventsBinding? = null
     private val binding get() = _binding!!
+    private var eventsPagerAdapter: EventsPagerAdapter? = null
+    private var tabLayoutMediator: TabLayoutMediator? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,12 +23,22 @@ class EventsFragment : Fragment() {
     ): View {
         _binding = FragmentEventsBinding.inflate(inflater, container, false)
 
-        val eventsPagerAdapter = EventsPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
+        eventsPagerAdapter = EventsPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
         binding.eventsVewPager.adapter = eventsPagerAdapter
-        TabLayoutMediator(binding.eventsTabLayout, binding.eventsVewPager) { tab, position ->
-            tab.text = eventsPagerAdapter.getPageTitle(position)
-        }.attach()
+        tabLayoutMediator = TabLayoutMediator(binding.eventsTabLayout, binding.eventsVewPager) { tab, position ->
+            tab.text = eventsPagerAdapter?.getPageTitle(position)
+        }
+        tabLayoutMediator!!.attach()
         binding.eventsTabLayout.tabMode = TabLayout.MODE_SCROLLABLE;
         return binding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.eventsVewPager.adapter = null
+        _binding = null
+        eventsPagerAdapter = null
+        tabLayoutMediator?.detach()
+        tabLayoutMediator = null
     }
 }
