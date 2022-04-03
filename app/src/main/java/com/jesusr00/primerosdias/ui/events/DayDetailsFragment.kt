@@ -24,10 +24,10 @@ class DayDetailsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        db = DatabaseHelper(requireContext())
         arguments?.let {
             dayEventsKey = it.getInt(DAY_EVENTS, 0)
         }
-        db = DatabaseHelper(requireContext())
     }
 
     override fun onCreateView(

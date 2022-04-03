@@ -27,7 +27,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardFeu"
         android:layout_marginHorizontal="5dp"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-45dp"
         android:layout_marginBottom="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,8 +45,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="35dp"
-                android:text="Nombre" />
+                android:layout_marginTop="40dp"
+                android:text="@string/person_name" />
 
             <TextView
                 android:id="@+id/cardPersonPosition"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cardPersonName"
                 android:layout_centerHorizontal="true"
-                android:text="Cargo" />
+                android:text="@string/person_charge" />
 
         </RelativeLayout>
 

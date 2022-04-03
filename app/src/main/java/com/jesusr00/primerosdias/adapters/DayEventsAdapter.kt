@@ -32,7 +32,7 @@ class DayEventsAdapter(private val events: List<Event>) : RecyclerView.Adapter<D
 
         private fun getDateTime(s: Long): String? {
             return try {
-                val sdf = SimpleDateFormat("hh:mm a")
+                val sdf = SimpleDateFormat("hh:mm a", Locale.getDefault())
                 val netDate = Date(s*1000)
                 sdf.format(netDate)
             } catch (e: Exception) {

@@ -28,7 +28,7 @@
         <activity
             android:name="com.jesusr00.primerosdias.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.PrimarosDías.NoActionBar"/>
+            android:theme="@style/Theme.PrimarosDías"/>
     </application>
 
 </manifest>
