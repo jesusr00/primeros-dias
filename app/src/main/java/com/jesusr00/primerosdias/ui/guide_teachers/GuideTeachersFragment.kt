@@ -30,13 +30,12 @@ class GuideTeachersFragment : Fragment() {
         return binding.root
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var guideTeachers: ArrayList<GuideTeachers>?
-        GlobalScope.launch(Dispatchers.Main) {
+        MainScope().launch(Dispatchers.Main) {
             guideTeachers = (async { db.getAllGuideTeachers() }).await()
-            binding.guideTeachersRecyclerview.adapter = GuideTeachersAdapter(guideTeachers!!)
+            binding.guideTeachersRecyclerview.adapter = GuideTeachersAdapter(guideTeachers!!, requireActivity().supportFragmentManager)
             binding.guideTeachersProgress.visibility = View.GONE
             binding.guideTeachersRecyclerview.visibility = View.VISIBLE
         }

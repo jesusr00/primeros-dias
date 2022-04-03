@@ -2,7 +2,6 @@
     <string name="app_name">Primaros Días</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Primeros Días</string>
     <string name="nav_header_subtitle">Facultad de Tecnologías Educativas</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
@@ -18,6 +17,8 @@
     <string name="scientific_groups">Grupos de Trabajo Cientifico Estudicntil</string>
     <string name="map">Mapa de la UCI</string>
     <string name="useful_data">Datos Utiles</string>
+
+    <string name="fullscreen_photo">Fullscreen Photo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -35,5 +36,7 @@
     <string name="events_description">Organizamos, participamos y promovemos importantes eventos científicos, académicos, sociales, políticos, culturales y deportivos, a nivel nacional e internacional.</string>
     <string name="graduates_title">Egresados</string>
     <string name="graduates_description">Durante 19 años hemos graduado 15 453 Ingenieros en Ciencias Informáticas con un alto nivel de especialización en el trabajo con las tecnologías de la información y las comunicaciones.</string>
+    <string name="person_name">Nombre</string>
+    <string name="person_charge">Cargo</string>
 
 </resources>

@@ -30,14 +30,13 @@ class DirectionCouncilFragment : Fragment() {
         return binding.root
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         var directionCouncilMembers: ArrayList<DirectionCouncilMember>?
-        GlobalScope.launch(Dispatchers.Main) {
+        MainScope().launch(Dispatchers.Main) {
             directionCouncilMembers = (async { db.getAllDirectionCouncilMembers() }).await()
-            binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(directionCouncilMembers!!)
+            binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(directionCouncilMembers!!, requireActivity().supportFragmentManager)
             binding.directionCouncilProgress.visibility = View.GONE
             binding.directionCouncilRecyclerView.visibility = View.VISIBLE
         }
