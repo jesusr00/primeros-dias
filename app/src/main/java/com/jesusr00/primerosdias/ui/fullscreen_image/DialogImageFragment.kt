@@ -38,7 +38,7 @@ class DialogImageFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val photo = db.getPhotoById(photoId!!)
-        binding.image.setImageBitmap(photo.getPhoto())
+        binding.image.setImageBitmap(photo.photo())
     }
 
     companion object {

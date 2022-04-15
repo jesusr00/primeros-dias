@@ -6,6 +6,7 @@ import com.jesusr00.primerosdias.models.DirectionCouncilMember
 import com.jesusr00.primerosdias.models.Event
 import com.jesusr00.primerosdias.models.GuideTeachers
 import com.jesusr00.primerosdias.models.Photo
+import com.jesusr00.primerosdias.models.*
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper
 
 class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -58,6 +59,18 @@ class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME
         return photo
     }
 
+
+    fun getFeuSecretariatMembers(): ArrayList<FeuSecretariatMember> {
+        val result = ArrayList<FeuSecretariatMember>()
+        val queryCursor = readableDatabase.rawQuery(FEU_SECRETARIAT, null);
+        while (queryCursor.moveToNext()){
+            result.add(FeuSecretariatMember(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getString(3), queryCursor.getInt(4) ,Photo(queryCursor.getInt(5),queryCursor.getBlob(6))))
+        }
+        queryCursor.close()
+        close()
+        return result
+    }
+    
     companion object {
         private const val DATABASE_NAME = "info.db"
         private const val DATABASE_VERSION = 1
@@ -65,5 +78,6 @@ class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME
         private const val DIRECTION_COUNCIL = "SELECT name, last_name, username, charge, photo_id, photo FROM main.r_direction_council INNER JOIN main.t_people ON r_direction_council.peopleId = t_people.id INNER JOIN main.t_charges ON r_direction_council.chargesId = t_charges.id LEFT JOIN t_photo ON t_people.photo_id = t_photo.id"
         private const val EVENTS = "SELECT day, start_time, end_time, title, description, location, type FROM t_events INNER JOIN t_day ON t_events.day_id = t_day.id"
         private const val PHOTO = "SELECT id, photo FROM main.t_photo"
+        private const val FEU_SECRETARIAT = "SELECT name, last_name, username, charge, phone_number, photo_id, photo FROM r_feu_secretariat INNER JOIN t_people ON r_feu_secretariat.people_id = t_people.id INNER JOIN t_charges ON r_feu_secretariat.charge_id = t_charges.id LEFT JOIN t_photo ON t_people.photo_id = t_photo.id"
     }
 }

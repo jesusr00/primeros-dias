@@ -54,8 +54,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cardPersonName"
                 android:layout_centerHorizontal="true"
-                android:text="@string/person_charge" />
+                />
 
+            <TextView
+                android:id="@+id/cardPersonPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardPersonPosition"
+                android:layout_centerHorizontal="true"
+                />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

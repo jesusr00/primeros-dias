@@ -6,7 +6,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.jesusr00.primerosdias.ui.events.DayDetailsFragment
 
-class EventsPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
+class EventsPagerAdapter(
+    fragmentManager: FragmentManager,
+    lifecycle: Lifecycle
+): FragmentStateAdapter(fragmentManager, lifecycle) {
 
     override fun getItemCount(): Int = 5
 

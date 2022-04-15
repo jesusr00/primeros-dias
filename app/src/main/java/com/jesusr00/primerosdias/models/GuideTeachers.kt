@@ -1,3 +1,9 @@
 package com.jesusr00.primerosdias.models
 
-class GuideTeachers (val name: String, val lastName: String, val username: String, val group: Int, val photo: Photo)
+class GuideTeachers (
+    name: String,
+    lastName: String,
+    username: String,
+    val group: Int,
+    photo: Photo
+): Person(name, lastName, username, photo)

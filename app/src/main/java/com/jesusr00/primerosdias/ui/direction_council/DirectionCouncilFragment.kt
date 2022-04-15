@@ -33,10 +33,9 @@ class DirectionCouncilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var directionCouncilMembers: ArrayList<DirectionCouncilMember>?
         MainScope().launch(Dispatchers.Main) {
-            directionCouncilMembers = (async { db.getAllDirectionCouncilMembers() }).await()
-            binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(directionCouncilMembers!!, requireActivity().supportFragmentManager)
+            val directionCouncilMembers = (async { db.getAllDirectionCouncilMembers() }).await()
+            binding.directionCouncilRecyclerView.adapter = DirectionCouncilAdapter(directionCouncilMembers, childFragmentManager)
             binding.directionCouncilProgress.visibility = View.GONE
             binding.directionCouncilRecyclerView.visibility = View.VISIBLE
         }

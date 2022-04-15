@@ -24,6 +24,10 @@
         <entry key="app/src/main/res/layout/fragment_direction_conuncil.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_events.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_feu_muvements.xml" value="0.18854166666666666" />
+<<<<<<< HEAD
+=======
+        <entry key="app/src/main/res/layout/fragment_feu_secretariat.xml" value="0.1" />
+>>>>>>> 74029b8 (Add fullscrean image view, feu secretariant, person adapter, photo model)
         <entry key="app/src/main/res/layout/fragment_fullscreen_image.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_guide_teachers.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.18854166666666666" />

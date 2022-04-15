@@ -10,10 +10,7 @@ import com.jesusr00.primerosdias.adapters.DayEventsAdapter
 import com.jesusr00.primerosdias.database.DatabaseHelper
 import com.jesusr00.primerosdias.databinding.FragmentDayDetailsBinding
 import com.jesusr00.primerosdias.models.Event
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class DayDetailsFragment : Fragment() {
 
@@ -38,12 +35,11 @@ class DayDetailsFragment : Fragment() {
         return binding.root
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         var dayEvents: ArrayList<Event>?
-        GlobalScope.launch(Dispatchers.Main) {
+        MainScope().launch(Dispatchers.Main) {
             dayEvents = db?.getEventsByDayId(dayEventsKey!!)
             binding.dayEventsRecyclerView.adapter = DayEventsAdapter(dayEvents!!)
             binding.dayEventsProgress.visibility = View.GONE
