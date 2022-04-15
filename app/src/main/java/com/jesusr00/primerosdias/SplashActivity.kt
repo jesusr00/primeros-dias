@@ -9,13 +9,12 @@ import kotlinx.coroutines.*
 
 class SplashActivity : AppCompatActivity() {
 
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        GlobalScope.launch(Dispatchers.Main) {
+        MainScope().launch(Dispatchers.Main) {
             val customAssetsManager = CustomAssetsManager(this@SplashActivity)
             val images = customAssetsManager.getImages()
             val map = customAssetsManager.getMap()
@@ -32,7 +31,6 @@ class SplashActivity : AppCompatActivity() {
 
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             delay(3000)
-            //delay(30)
             startActivity(intent)
         }
     }

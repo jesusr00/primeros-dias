@@ -65,6 +65,12 @@
         android:label="@string/useful_data"
         tools:layout="@layout/fragment_useful_data" />
 
+    <fragment
+        android:id="@+id/nav_feu_secretariat"
+        android:name="com.jesusr00.primerosdias.ui.feu_secretariat.FeuSecretariatFragment"
+        android:label="@string/feu_secretariat"
+        tools:layout="@layout/fragment_feu_secretariat" />
+
     <action
         android:id="@+id/action_mobile_navigation_pop"
         app:enterAnim="@anim/fade_in"

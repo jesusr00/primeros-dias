@@ -1,7 +1,5 @@
 package com.jesusr00.primerosdias
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -37,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_home, R.id.nav_direction_council, R.id.nav_events, R.id.nav_faculty_info,
                 R.id.nav_feu_movements, R.id.nav_guide_teachers, R.id.nav_map, R.id.nav_scientific_groups,
-                R.id.nav_uci_info, R.id.nav_useful_data
+                R.id.nav_uci_info, R.id.nav_useful_data, R.id.nav_feu_secretariat
             ), drawerLayout
         )
 
@@ -93,6 +91,9 @@ class MainActivity : AppCompatActivity() {
                         R.id.nav_useful_data -> {
                             navController.navigate(R.id.nav_useful_data, null, navOptions)
                         }
+                        R.id.nav_feu_secretariat -> {
+                            navController.navigate(R.id.nav_feu_secretariat, null, navOptions)
+                        }
                     }
 
                     drawerLayout.removeDrawerListener(this)
@@ -106,36 +107,5 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return findNavController(R.id.nav_host_fragment_content_main).navigateUp(appBarConfiguration)
-    }
-
-    private fun fade(viewIn: View, viewOut: View, animateViewOut: Boolean = true) {
-
-        val fadeDuration = 200L
-
-        // Set the content view to 0% opacity but visible, so that it is visible
-        // (but fully transparent) during the animation.
-        viewIn.alpha = 0f
-        viewIn.visibility = View.VISIBLE
-        viewIn.bringToFront()
-
-        // Animate the in view to 100% opacity, and clear any animation
-        // listener set on the view.
-        viewIn.animate()
-            .alpha(1f)
-            .setDuration(fadeDuration)
-            .setListener(null)
-
-        // Animate the out view to 0% opacity. After the animation ends,
-        // set its visibility to GONE as an optimization step (it won't
-        // participate in layout passes, etc.)
-        viewOut.animate()
-            .alpha(0f)
-            .setDuration(if (animateViewOut) fadeDuration else 0)
-            .setListener(object : AnimatorListenerAdapter() {
-                override fun onAnimationEnd(animation: Animator) {
-                    viewOut.visibility = View.GONE
-                }
-            })
-
     }
 }

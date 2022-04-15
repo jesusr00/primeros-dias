@@ -32,10 +32,9 @@ class GuideTeachersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var guideTeachers: ArrayList<GuideTeachers>?
         MainScope().launch(Dispatchers.Main) {
-            guideTeachers = (async { db.getAllGuideTeachers() }).await()
-            binding.guideTeachersRecyclerview.adapter = GuideTeachersAdapter(guideTeachers!!, requireActivity().supportFragmentManager)
+            val guideTeachers = (async { db.getAllGuideTeachers() }).await()
+            binding.guideTeachersRecyclerview.adapter = GuideTeachersAdapter(guideTeachers, childFragmentManager)
             binding.guideTeachersProgress.visibility = View.GONE
             binding.guideTeachersRecyclerview.visibility = View.VISIBLE
         }
