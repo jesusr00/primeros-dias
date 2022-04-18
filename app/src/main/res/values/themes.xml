@@ -38,7 +38,7 @@
         <!--        <item name="colorInversePrimary">@color/md_theme_light_inversePrimary</item>-->
         <!--        <item name="colorShadow">@color/md_theme_light_shadow</item>-->
         <item name="colorPrimaryInverse">@color/md_theme_light_primaryInverse</item>
-        <item name="colorPrimaryDark">@color/md_theme_light_primary_dark</item>
+<!--        <item name="colorPrimaryDark">@color/md_theme_light_primary_dark</item>-->
     </style>
 
     <style name="SplashTheme" parent="Theme.PrimarosDías.NoActionBar">

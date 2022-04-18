@@ -15,7 +15,7 @@
 
         <item
             android:id="@+id/nav_feu_secretariat"
-            android:icon="@drawable/ic_black_meeting"
+            android:icon="@drawable/ic_feu_secretariant"
             android:title="@string/feu_secretariat" />
 
         <item

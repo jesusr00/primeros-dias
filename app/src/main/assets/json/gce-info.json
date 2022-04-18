@@ -1,0 +1,60 @@
+{
+  "gce_info": "El ambiente docente de la facultad es un entorno idóneo que permite el surgimiento y evolución de facultades científicas e intereses profesionales en sus estudiantes. Por ello, como parte de su preparación estos deberán mantener una continua participación en las actividades investigativas desarrolladas en el centro, a fin de adquirir la distinción al Mérito Científico al finalizar su carrera, la cual le será otorgada considerando su desempeño en el hacer científico-productivo e innovador de la universidad atraves de sus aportes mediante la publicación de informes y trabajos, y sus resultados en proyectos e investigaciones.\n\nCon el fin estimular la presencia de los alumnos de dentro de las diversas esferas investigativas de la universidad, e incentivar la presentación de estos de soluciones novedosas que deriven en proyectos innovadores de un marcado impacto social ha sido creado el Grupo Científico Estudiantil de la Facultad de tecnologías Educativas.\n\nPara cumplir con este propósito, dentro del GCE se desarrollan de manera sistemática todo un grupo de actividades orientadas a promover una cultura científica generalizada dentro de la comunidad académica, que permita la integración de los conocimientos teóricos en complemento a prácticas y metodologías de trabajo más eficientes dentro de los distintos escenarios del desarrollo de software.\n\nEn complemento a las actividades del GCE, la facultad de conjunto con la universidad organiza una serie de eventos, expositivos donde los estudiantes pueden exponer aquellas investigaciones que hayan realizado de manera autodidacta o derivadas de sus actividades docentes.\n\nAdemás a lo largo del año se celebran competencias en las cuales los docentes demuestran el dominio que tienen de los conceptos teóricos aprendidos y las habilidades prácticas adquiridas, los cuales son indispensables para el desarrollo de soluciones computacionales.\n\nTodo esto, en fin de propiciar un ambiente de intercambio de experiencias y conocimientos que tribute al crecimiento profesional del estudiantado y en paralelo a contribuya los intereses de trabajo de la universidad.",
+  "gce_activities": [
+    "La Distribución de recursos y materiales complementarios a la carga de contenido docente relacionados con temas de interés científico, tecnológico, metodológico y profesional.",
+    "Debates sobre las situaciones que condicionan al Trabajo Científico dentro de la comunidad universitaria en fin de contribuir a su solución.",
+    "La Celebración investigativos de carácter participativo dentro de la facultad y la propia universidad con base en el trabajo conjunto de los miembros, la FEU y los demás directivos implicados en su ejecución.",
+    "La Divulgación de convocatorias e invitaciones a actividades científicas auspiciadas por universidades e instituciones externas. Incluidos foros y ferias internacionales.",
+    "El Desarrollo de Cursos, Talleres y Charlas que permiten la familiarización con ciertas tecnologías de desarrollo y metodologías investigativas actuales.",
+    "Exposición de las líneas de Trabajo de la Universidad mediante visitas a los Centros de Producción y Conversatorios con sus responsables.",
+    "La Vinculación de los estudiantes más capacitados a los Centro de Producción de la universidad, según el volumen de personal y habilidades requeridas.",
+    "El Seguimiento y evaluación del desempeño de los estudiantes integrados a Proyectos.",
+    "La Promoción de Trabajos e Informes derivados de las investigaciones, para lograr su publicación en series científicas y demás plataformas de conocimiento.",
+    "La Divulgación de las actividades de la Universidad en el marco de la celebración de los eventos de la Facultad."
+  ],
+  "gce_events": [
+    {
+      "name": "El Fórum de Historia",
+      "description": "Evento, dedicado al estudio de la evolución de las tecnologías y las prácticas de desarrollo, en el cual se exponen informes, presentaciones, aplicaciones y demás recursos vinculados a tema de interés científico e histórico, y se realizan otras actividades participativas colaterales. Los trabajos relevantes y destacados de las facultades pasan a nivel de Universidad para ser evaluados."
+    },
+    {
+      "name": "Copa BYOD",
+      "description": "Bring Your Own Device, competencia de Programación desarrollada por la Facultad de Tecnologías Educativas de manera presencial en la modalidad de equipos de 3 mediante la plataforma Virtual Judge, donde se considerarán las destrezas de los estudiantes de cada año para implementar algoritmos de mediana a alta complejidad. La selección de los ganadores se realiza atendiendo al ranking de cada año aún si los equipos son de grados mixtos. Una vez concluya el tiempo establecido, se atribuirán las siguientes categorías: Equipo ganador, Equipo veloz, Equipo certero, Brigada ganadora y Brigada empeño."
+    },
+    {
+      "name": "Olimpiadas de Matemáticas",
+      "description": "Actividad competitiva donde se ponen a prueba el dominio del Algebra, la Geometría, la Estadística y demás aristas de la ciencia madre, mediante pruebas comprobatorias realizadas a nivel de facultad que permiten seleccionar aquellos participantes que representarán a esta a nivel UCI"
+    },
+    {
+      "name": "Copa Pascal de Programación",
+      "description": "Evento competitivo patrocinado donde los participantes realizan el diseño y codificación de programas computacionales para dar soluciones a problemáticas propuestas, con el fin de avanzar en la tabla de posiciones, y alcanzar el primer puesto."
+    },
+    {
+      "name": "Las JICI",
+      "description": "Jornadas del Ingeniero en Ciencias Informáticas, constituyen el principal evento investigativo desarrollado dentro de la UCI, en el mismo se realizan exposiciones y competencias colaterales donde son premiadas las habilidades y trabajos de los participantes, en las diferentes especialidades y a varios niveles"
+    },{
+      "name": "Concurso de Base de Datos",
+      "description": "Evento de las JICI donde equipos formados por aquellos estudiantes aventajados en el manejo de Sistemas Gestores de Bases de Datos deben diseñar estructuras de datos y algoritmos de consulta lo más eficientes posibles para dar solución a una serie de problemáticas asignadas."
+    },
+    {
+      "name": "Festival de las Aplicaciones",
+      "description": "Competencia de las JICI donde estudiantes con conocimientos de desarrollo de aplicaciones móviles, pueden demostrar ante un panel de expertos en el tema aquellos productos implementados para la automatización de procesos, la divulgación de contenido y el aporte al entretenimiento. Los desarrolladores poseen libertad para escoger el eje temático de su aplicación, y tras superar el nivel de facultad estas quedan promovidas para ser expuestas y evaluadas a nivel de universidad."
+    },
+    {
+      "name": "Mi WebXCuba",
+      "description": "Actividad expositiva celebrada como parte de las JICI dedicada a los amantes del desarrollo de servicios on-line y al diseño Web, donde estos tienen la oportunidad de presentar plataformas interactivas propias destinadas a solucionar problemáticas de la sociedad cubana."
+    },
+    {
+      "name": "Copa ACM-ICPC",
+      "description": "International Collegiate Programming Contest, es la Fiesta de la Programación Internacional auspiciada por la Asociación de Máquinas Computadoras (ACM) en la cual los competidores programan soluciones computacionales que brinden solución a los problemas propuestos por el jurado. A lo largo del año se desarrollan varías convocatorias con el fin de seleccionar los mejores candidatos dentro de las distintas instituciones y regiones del país para que compitan en las ediciones internacionales."
+    },
+    {
+      "name": "Global Game JAM",
+      "description": "Es la ocasión donde aquellos fanáticos de la creación de videojuegos demuestran su talento mediante una competición en equipos de 3 que obliga a los autores crear pequeñas obras de arte en un plazo no mayor a 48 horas, empleando para ello aquellas herramientas y recursos que deseen; siempre que no violen las normas de autenticidad, y cuyo eje central es el tema escogido por los organizadores del evento."
+    },
+    {
+      "name": "Pacha Mama Game JAM",
+      "description": "Evento competitivo destinado al desarrollo de videojuegos y demos con eje temático central en la conservación del medio ambiente y la protección de las especies en peligro de extinción. Se desarrolla en la misma modalidad que la Global Game JAM."
+    }
+  ]
+}

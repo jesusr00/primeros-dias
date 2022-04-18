@@ -14,7 +14,7 @@
     <string name="guide_teachers">Profesores guías</string>
     <string name="events">Principales eventos</string>
     <string name="feu_movements">Movimientos FEU</string>
-    <string name="scientific_groups">Grupos de Trabajo Cientifico Estudicntil</string>
+    <string name="scientific_groups">Grupos Cientifico Estudiantil</string>
     <string name="map">Mapa de la UCI</string>
     <string name="useful_data">Datos Utiles</string>
     <string name="feu_secretariat">Secretariado de la FEU</string>
@@ -40,4 +40,5 @@
     <string name="person_name">Nombre</string>
     <string name="person_charge">Cargo</string>
 
+    <!--    FEU Info-->
 </resources>

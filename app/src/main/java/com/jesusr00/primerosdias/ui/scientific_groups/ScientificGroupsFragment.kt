@@ -1,20 +1,41 @@
 package com.jesusr00.primerosdias.ui.scientific_groups
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jesusr00.primerosdias.R
+import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayoutMediator
+import com.jesusr00.primerosdias.adapters.GcePagerAdapter
+import com.jesusr00.primerosdias.databinding.FragmentScientificGroupsBinding
 
 class ScientificGroupsFragment : Fragment() {
 
+    private var _binding: FragmentScientificGroupsBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scientific_groups, container, false)
+    ): View {
+        _binding = FragmentScientificGroupsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            gceVewPager.adapter = GcePagerAdapter(childFragmentManager, lifecycle)
+            TabLayoutMediator(gceTabLayout, gceVewPager) { tab, position ->
+                tab.text = when (position) {
+                    0 -> "GCE"
+                    1 -> "Actividades"
+                    2 -> "Eventos"
+                    else -> "GCE"
+                }
+            }.attach()
+        }
     }
 
 }

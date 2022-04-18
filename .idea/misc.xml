@@ -16,19 +16,23 @@
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.172" />
         <entry key="app/src/main/res/drawable/splash.xml" value="0.165" />
         <entry key="app/src/main/res/layout/card_feu.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/card_gce_activities.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/card_gce_activity.xml" value="0.8305921052631579" />
+        <entry key="app/src/main/res/layout/card_gce_events.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/card_person.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/dialog_photo.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_day_details.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/layout/fragment_dialog_image.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_direction_conuncil.xml" value="0.18854166666666666" />
-        <entry key="app/src/main/res/layout/fragment_events.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_events.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_faculty_info.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_feu_muvements.xml" value="0.18854166666666666" />
-<<<<<<< HEAD
-=======
         <entry key="app/src/main/res/layout/fragment_feu_secretariat.xml" value="0.1" />
->>>>>>> 74029b8 (Add fullscrean image view, feu secretariant, person adapter, photo model)
         <entry key="app/src/main/res/layout/fragment_fullscreen_image.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_gce.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_gce_activities.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_gce_events.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_guide_teachers.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_scientific_groups.xml" value="0.18854166666666666" />

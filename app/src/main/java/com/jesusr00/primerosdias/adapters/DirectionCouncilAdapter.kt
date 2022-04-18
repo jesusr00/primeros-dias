@@ -5,7 +5,7 @@ import com.jesusr00.primerosdias.models.DirectionCouncilMember
 
 class DirectionCouncilAdapter(
     private val directionCouncilMember: ArrayList<DirectionCouncilMember>,
-    private val fragmentManager: FragmentManager
+    fragmentManager: FragmentManager
 ):  PersonAdapter<DirectionCouncilMember>(directionCouncilMember, fragmentManager) {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
