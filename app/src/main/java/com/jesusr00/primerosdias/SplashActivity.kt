@@ -18,6 +18,8 @@ class SplashActivity : AppCompatActivity() {
             val customAssetsManager = CustomAssetsManager(this@SplashActivity)
             val images = customAssetsManager.getImages()
             val map = customAssetsManager.getMap()
+            val videos = customAssetsManager.getVideos()
+            val json = customAssetsManager.getJson()
             if (images.isEmpty()) {
                 Log.d("SplashActivity", "No hay imagenes")
                 Log.d("SplashActivity", "Copiando imagenes")
@@ -28,9 +30,19 @@ class SplashActivity : AppCompatActivity() {
                 Log.d("SplashActivity", "Copiando mapa")
                 customAssetsManager.copyAssetsMap()
             }
+            if (videos.isEmpty()){
+                Log.d("SplashActivity", "No hay videos")
+                Log.d("SplashActivity", "Copiando videos")
+                customAssetsManager.copyAssetsVideos()
+            }
+            if (json.isEmpty()){
+                Log.d("SplashActivity", "No hay json")
+                Log.d("SplashActivity", "Copiando json")
+                customAssetsManager.copyAssetsJson()
+            }
 
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
-            delay(3000)
+            delay(300)
             startActivity(intent)
         }
     }

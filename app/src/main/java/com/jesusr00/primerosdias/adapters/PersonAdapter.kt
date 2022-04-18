@@ -22,20 +22,23 @@ open class PersonAdapter<T: Person>(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = "${people[position].name} ${people[position].lastName}"
-        if (people[position].photo.photo != null && people[position].photo.photo!!.isNotEmpty())
-            holder.photo.setImageBitmap(people[position].photo.photo())
-        else
-            holder.photo.setImageResource(R.drawable.ic_fte_black_logo)
-
-        if (people[position].photo.photo != null && people[position].photo.photo!!.isNotEmpty())
-            holder.photo.setOnClickListener {
-                DialogImageFragment.newInstance(people[position].photo.id!!)
-                    .show(fragmentManager, "dialog")
+        holder.photo.apply {
+            if (people[position].photo.photo != null && people[position].photo.photo!!.isNotEmpty()){
+                setImageBitmap(people[position].photo.photo())
+                setOnClickListener {
+                    DialogImageFragment.newInstance(people[position].photo.id!!)
+                        .show(fragmentManager, "dialog")
+                }
             }
+            else{
+                setImageResource(R.drawable.ic_fte_black_logo)
+                setOnClickListener(null)
+            }
+        }
+
     }
 
     override fun getItemCount(): Int = people.size
-
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val name: TextView = itemView.findViewById(R.id.cardPersonName)

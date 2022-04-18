@@ -31,7 +31,7 @@ class DayEventsAdapter(private val events: List<Event>) : RecyclerView.Adapter<D
 
         @SuppressLint("SetTextI18n")
         fun bind(event: Event) {
-            title.text = "${event.title}\n${DateManager().getDateTime(event.startTime)}"
+            title.text = "${event.title}\n${DateManager.getDateTime(event.startTime)}"
             description.text = event.description
         }
     }
