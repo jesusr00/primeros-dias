@@ -41,4 +41,10 @@ class DirectionCouncilFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.directionCouncilRecyclerView.adapter = null
+        _binding = null
+    }
+
 }

@@ -38,4 +38,10 @@ class ScientificGroupsFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.gceVewPager.adapter = null
+        _binding = null
+    }
+
 }

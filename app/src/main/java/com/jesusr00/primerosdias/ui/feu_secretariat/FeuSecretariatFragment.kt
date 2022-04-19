@@ -44,4 +44,10 @@ class FeuSecretariatFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.feuSecretariatRecyclerview.adapter = null
+        _binding = null
+    }
+
 }

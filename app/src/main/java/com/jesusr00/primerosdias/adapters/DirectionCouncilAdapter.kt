@@ -10,5 +10,6 @@ class DirectionCouncilAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
         holder.position.text = directionCouncilMember[position].position
+        holder.phone.text = "Nombre de usuario: ${directionCouncilMember[position].username}"
     }
 }

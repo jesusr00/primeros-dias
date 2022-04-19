@@ -4,10 +4,16 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+<!--        <item-->
+<!--            android:id="@+id/nav_home"-->
+<!--            android:icon="@drawable/ic_black_home"-->
+<!--            android:title="@string/menu_home" />-->
+
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_black_home"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_uci_info"
+            android:icon="@drawable/ic_black_university"
+            android:title="@string/uci_info" />
+
         <item
             android:id="@+id/nav_direction_council"
             android:icon="@drawable/ic_black_meeting"
@@ -19,11 +25,6 @@
             android:title="@string/feu_secretariat" />
 
         <item
-            android:id="@+id/nav_uci_info"
-            android:icon="@drawable/ic_black_university"
-            android:title="@string/uci_info" />
-
-        <item
             android:id="@+id/nav_faculty_info"
             android:icon="@drawable/ic_fte_black_logo"
             android:title="@string/faculty_info" />
@@ -33,15 +34,21 @@
             android:icon="@drawable/ic_black_teachers"
             android:title="@string/guide_teachers" />
 
-        <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/ic_black_events_calendar"
-            android:title="@string/events" />
+<!--        <item-->
+<!--            android:id="@+id/nav_events"-->
+<!--            android:icon="@drawable/ic_black_events_calendar"-->
+<!--            android:title="@string/events" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_feu_movements"-->
+<!--            android:icon="@drawable/ic_black_student"-->
+        <!--            android:title="@string/feu_movements" />-->
+
 
         <item
-            android:id="@+id/nav_feu_movements"
+            android:id="@+id/nav_cloister"
             android:icon="@drawable/ic_black_student"
-            android:title="@string/feu_movements" />
+            android:title="@string/cloister" />
 
         <item
             android:id="@+id/nav_scientific_groups"
