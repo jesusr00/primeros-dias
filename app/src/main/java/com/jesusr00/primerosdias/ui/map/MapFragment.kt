@@ -78,4 +78,8 @@ class MapFragment : Fragment(){
         mapView.layerManager.layers.add(tileRendererLayer)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        tileCache.destroy()
+    }
 }

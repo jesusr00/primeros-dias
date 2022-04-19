@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_uci_info">
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.jesusr00.primerosdias.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_home"-->
+<!--        android:name="com.jesusr00.primerosdias.ui.home.HomeFragment"-->
+<!--        android:label="@string/menu_home"-->
+<!--        tools:layout="@layout/fragment_home" />-->
 
     <fragment
         android:id="@+id/nav_direction_council"
@@ -35,17 +35,17 @@
         android:label="@string/guide_teachers"
         tools:layout="@layout/fragment_guide_teachers" />
 
-    <fragment
-        android:id="@+id/nav_events"
-        android:name="com.jesusr00.primerosdias.ui.events.EventsFragment"
-        android:label="@string/events"
-        tools:layout="@layout/fragment_events" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_events"-->
+<!--        android:name="com.jesusr00.primerosdias.ui.events.EventsFragment"-->
+<!--        android:label="@string/events"-->
+<!--        tools:layout="@layout/fragment_events" />-->
 
-    <fragment
-        android:id="@+id/nav_feu_movements"
-        android:name="com.jesusr00.primerosdias.ui.feu_movements.FeuMovements"
-        android:label="@string/feu_movements"
-        tools:layout="@layout/fragment_feu_movements" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_feu_movements"-->
+<!--        android:name="com.jesusr00.primerosdias.ui.feu_movements.FeuMovements"-->
+<!--        android:label="@string/feu_movements"-->
+<!--        tools:layout="@layout/fragment_feu_movements" />-->
 
     <fragment
         android:id="@+id/nav_scientific_groups"
@@ -70,6 +70,12 @@
         android:name="com.jesusr00.primerosdias.ui.feu_secretariat.FeuSecretariatFragment"
         android:label="@string/feu_secretariat"
         tools:layout="@layout/fragment_feu_secretariat" />
+
+    <fragment
+        android:id="@+id/nav_cloister"
+        android:name="com.jesusr00.primerosdias.ui.cloister.CloisterFragment"
+        android:label="@string/cloister"
+        tools:layout="@layout/fragment_cloister"/>
 
     <action
         android:id="@+id/action_mobile_navigation_pop"

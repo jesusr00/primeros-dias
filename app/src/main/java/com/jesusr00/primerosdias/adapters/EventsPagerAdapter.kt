@@ -14,14 +14,7 @@ class EventsPagerAdapter(
     override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> DayDetailsFragment.newInstance(1)
-            1 -> DayDetailsFragment.newInstance(2)
-            2 -> DayDetailsFragment.newInstance(3)
-            3 -> DayDetailsFragment.newInstance(4)
-            4 -> DayDetailsFragment.newInstance(5)
-            else -> DayDetailsFragment.newInstance(6)
-        }
+        return DayDetailsFragment.newInstance(position+1)
     }
 
     fun getPageTitle(position: Int): String {

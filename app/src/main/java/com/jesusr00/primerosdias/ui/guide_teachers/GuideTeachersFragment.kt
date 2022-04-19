@@ -39,4 +39,10 @@ class GuideTeachersFragment : Fragment() {
             binding.guideTeachersRecyclerview.visibility = View.VISIBLE
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.guideTeachersRecyclerview.adapter = null
+        _binding = null
+    }
 }
