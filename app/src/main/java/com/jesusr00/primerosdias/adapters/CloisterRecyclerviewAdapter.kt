@@ -9,7 +9,7 @@ class CloisterRecyclerviewAdapter(
 ): PersonAdapter<Professor>(professors, fragmentManager) {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
-        holder.position.text = "${professors[position].teacherType} de ${professors[position].classType}"
+        holder.position.text = "${professors[position].teacherType} de ${professors[position].classType} de ${professors[position].subject}"
         holder.phone.text = "Nombre de usuario: ${professors[position].username}"
     }
 }

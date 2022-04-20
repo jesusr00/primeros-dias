@@ -75,7 +75,7 @@ class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME
         val professors = ArrayList<Professor>()
         val queryCursor = readableDatabase.rawQuery("$CLOISTER$groupId", null);
         while (queryCursor.moveToNext()){
-            professors.add(Professor(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getString(3), queryCursor.getString(4), Photo(queryCursor.getInt(5),queryCursor.getBlob(6))))
+            professors.add(Professor(queryCursor.getString(0), queryCursor.getString(1), queryCursor.getString(2), queryCursor.getString(3), queryCursor.getString(4), queryCursor.getString(5) ,Photo(queryCursor.getInt(6),queryCursor.getBlob(7))))
         }
         queryCursor.close()
         close()
@@ -90,6 +90,6 @@ class DatabaseHelper(context: Context): SQLiteAssetHelper(context, DATABASE_NAME
         private const val EVENTS = "SELECT day, start_time, end_time, title, description, location, type FROM t_events INNER JOIN t_day ON t_events.day_id = t_day.id"
         private const val PHOTO = "SELECT id, photo FROM main.t_photo"
         private const val FEU_SECRETARIAT = "SELECT name, last_name, username, charge, phone_number, photo_id, photo FROM r_feu_secretariat INNER JOIN t_people ON r_feu_secretariat.people_id = t_people.id INNER JOIN t_charges ON r_feu_secretariat.charge_id = t_charges.id LEFT JOIN t_photo ON t_people.photo_id = t_photo.id"
-        private const val CLOISTER = "SELECT name, last_name, username, class_type, teacher_type, photo_id, photo FROM r_cloister INNER JOIN t_people ON r_cloister.people_id = t_people.id INNER JOIN t_class_type ON r_cloister.class_type_id = t_class_type.id INNER JOIN t_teacher_type ON r_cloister.teacher_type_id = t_teacher_type.id LEFT JOIN t_photo ON t_people.photo_id = t_photo.id WHERE r_cloister.brigade_id = "
+        private const val CLOISTER = "SELECT t_people.name, last_name, username, class_type, teacher_type, t_subjects.name, photo_id, photo FROM r_cloister INNER JOIN t_people ON r_cloister.people_id = t_people.id INNER JOIN t_class_type ON r_cloister.class_type_id = t_class_type.id INNER JOIN t_teacher_type ON r_cloister.teacher_type_id = t_teacher_type.id INNER JOIN t_subjects ON r_cloister.subjects_id = t_subjects.id LEFT JOIN t_photo ON t_people.photo_id = t_photo.id WHERE r_cloister.brigade_id = "
     }
 }

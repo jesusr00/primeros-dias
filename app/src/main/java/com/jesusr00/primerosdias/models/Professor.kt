@@ -6,5 +6,6 @@ class Professor(
     username: String,
     val classType: String,
     val teacherType: String,
+    val subject: String,
     photo: Photo
 ):Person(name, lastName, username, photo)
