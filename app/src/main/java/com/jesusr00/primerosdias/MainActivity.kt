@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_direction_council, R.id.nav_faculty_info, R.id.nav_cloister,
+                R.id.nav_direction_council, R.id.nav_cloister,
                 R.id.nav_guide_teachers, R.id.nav_map, R.id.nav_scientific_groups,
                 R.id.nav_uci_info, R.id.nav_useful_data, R.id.nav_feu_secretariat
             ), drawerLayout
@@ -65,9 +65,6 @@ class MainActivity : AppCompatActivity() {
                     when (menuItem.itemId) {
                         R.id.nav_direction_council -> {
                             navController.navigate(R.id.nav_direction_council, null, navOptions)
-                        }
-                        R.id.nav_faculty_info -> {
-                            navController.navigate(R.id.nav_faculty_info, null, navOptions)
                         }
                         R.id.nav_guide_teachers -> {
                             navController.navigate(R.id.nav_guide_teachers, null, navOptions)

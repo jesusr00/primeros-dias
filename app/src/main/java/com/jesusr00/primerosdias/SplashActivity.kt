@@ -30,11 +30,6 @@ class SplashActivity : AppCompatActivity() {
                 Log.d("SplashActivity", "Copiando mapa")
                 customAssetsManager.copyAssetsMap()
             }
-            if (videos.isEmpty()){
-                Log.d("SplashActivity", "No hay videos")
-                Log.d("SplashActivity", "Copiando videos")
-                customAssetsManager.copyAssetsVideos()
-            }
             if (json.isEmpty()){
                 Log.d("SplashActivity", "No hay json")
                 Log.d("SplashActivity", "Copiando json")

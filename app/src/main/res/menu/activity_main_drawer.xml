@@ -24,10 +24,10 @@
             android:icon="@drawable/ic_feu_secretariant"
             android:title="@string/feu_secretariat" />
 
-        <item
-            android:id="@+id/nav_faculty_info"
-            android:icon="@drawable/ic_fte_black_logo"
-            android:title="@string/faculty_info" />
+<!--        <item-->
+<!--            android:id="@+id/nav_faculty_info"-->
+<!--            android:icon="@drawable/ic_fte_black_logo"-->
+<!--            android:title="@string/faculty_info" />-->
 
         <item
             android:id="@+id/nav_guide_teachers"
