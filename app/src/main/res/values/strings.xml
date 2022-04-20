@@ -41,5 +41,17 @@
     <string name="person_name">Nombre</string>
     <string name="person_charge">Cargo</string>
 
+
+    <string name="schedule">Horario del Comedor</string>
+    <string name="almuerzo">Almuerzo:\n Comienza: 11:00ap \t Termina: 1:50pm</string>
+    <string name="desayuno">Desayuno:\n Comienza: 6:30am \t Termina: 8:30am</string>
+    <string name="comida">Comida:\n Comienza: 6:00pm \t Termina: 7:50pm</string>
+    <string name="phones">Telefonos</string>
+    <string name="decana">Decana:78373722</string>
+    <string name="vdf">Vicedecana de Formacion: 78373737</string>
+    <string name="vda">Vicedecano de Administracion: 78353875</string>
+    <string name="secretaria">Secretaría Docente: 78373705</string>
+    <string name="ppaa">Local de los PPAA: 78373709</string>
+
     <!--    FEU Info-->
 </resources>

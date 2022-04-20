@@ -1,14 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.useful_data.UsefulDataFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="0dp"
+            android:padding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule"
+                    android:id="@+id/schedule"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/desayuno"
+                    android:gravity="start"
+                    android:layout_below="@id/schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/desayuno"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/almuerzo"
+                    android:layout_below="@id/desayuno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/almuerzo"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+
+                    android:id="@+id/comida"
+                    android:layout_below="@id/almuerzo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comida"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="0dp"
+            android:padding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phones"
+                    android:id="@+id/phones"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/decana"
+                    android:gravity="start"
+                    android:layout_below="@id/phones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decana"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/vdf"
+                    android:layout_below="@id/decana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vdf"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/vda"
+                    android:layout_below="@id/vdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vda"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/secretaria"
+                    android:layout_below="@id/vda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secretaria"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:id="@+id/ppaa"
+                    android:layout_below="@id/secretaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ppaa"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>
