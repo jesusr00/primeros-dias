@@ -23,11 +23,11 @@
         android:label="@string/uci_info"
         tools:layout="@layout/fragment_uci_info" />
 
-    <fragment
-        android:id="@+id/nav_faculty_info"
-        android:name="com.jesusr00.primerosdias.ui.faculty_info.FacultyInfoFragment"
-        android:label="@string/faculty_info"
-        tools:layout="@layout/fragment_faculty_info" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_faculty_info"-->
+<!--        android:name="com.jesusr00.primerosdias.ui.faculty_info.FacultyInfoFragment"-->
+<!--        android:label="@string/faculty_info"-->
+<!--        tools:layout="@layout/fragment_faculty_info" />-->
 
     <fragment
         android:id="@+id/nav_guide_teachers"
