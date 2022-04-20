@@ -42,6 +42,8 @@ class BrigadeCloisterFragment : Fragment() {
         MainScope().launch(Dispatchers.Main) {
             val professors = (async { db.getCloisterByGroup(groupId!!) }).await()
             binding.brigadeRecyclerview.adapter = CloisterRecyclerviewAdapter(professors, childFragmentManager)
+            binding.brigadeProgressBar.visibility = View.GONE
+            binding.brigadeRecyclerview.visibility = View.VISIBLE
         }
     }
 

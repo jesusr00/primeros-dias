@@ -37,4 +37,10 @@ class CloisterFragment : Fragment() {
             }.attach()
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.cloisterViewPager.adapter = null
+        _binding = null
+    }
 }
