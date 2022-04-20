@@ -13,6 +13,6 @@ class FeuSecretariatAdapter(
         super.onBindViewHolder(holder, position)
         holder.position.text = feuSecretariatMembers[position].charge
         holder.phone.text = "+53 ${feuSecretariatMembers[position].phoneNumber}"
-        holder.photo.setOnClickListener(null)
+//        holder.photo.setOnClickListener(null)
     }
 }
